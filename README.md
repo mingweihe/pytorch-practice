@@ -1,2 +1,2 @@
 # pytorch-practice
-Deep learning framework PyTorch practice
+practices of Deep learning framework - PyTorch
