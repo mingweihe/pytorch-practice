@@ -24,7 +24,7 @@ y_train = np.array([[1.7], [2.76], [2.09], [3.19], [1.694], [1.573],
 x_train = torch.from_numpy(x_train)
 y_train = torch.from_numpy(y_train)
 
-# linear regression model
+# define a linear regression model
 class linear_regression(nn.Module):
     def __init__(self):
         super(linear_regression, self).__init__()

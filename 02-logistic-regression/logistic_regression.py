@@ -41,7 +41,7 @@ print(f'length of train loader: {len(train_loader)}')
 print(f'length of train set: {num_test}')
 print(f'length of test loader: {len(test_loader)}')
 
-# define the logistic regression model
+# define a logistic regression model
 class logistic_regression(nn.Module):
     def __init__(self, in_dim, n_class):
         super(logistic_regression, self).__init__()
