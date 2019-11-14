@@ -97,7 +97,6 @@ resize = T.Compose([T.ToPILImage(),
                     T.Resize(40, interpolation=Image.CUBIC),
                     T.ToTensor()])
 
-
 def get_cart_location(screen_width):
     world_width = env.x_threshold * 2
     scale = screen_width / world_width
@@ -127,7 +126,6 @@ def get_screen():
     screen = torch.from_numpy(screen)
     # Resize, and add a batch dimension (BCHW)
     return resize(screen).unsqueeze(0).to(device)
-
 
 env.reset()
 plt.figure()
@@ -163,9 +161,7 @@ target_net.eval()
 optimizer = optim.RMSprop(policy_net.parameters())
 memory = ReplayMemory(10000)
 
-
 steps_done = 0
-
 
 def select_action(state):
     global steps_done
@@ -182,9 +178,7 @@ def select_action(state):
     else:
         return torch.tensor([[random.randrange(n_actions)]], device=device, dtype=torch.long)
 
-
 episode_durations = []
-
 
 def plot_durations():
     plt.figure(2)
